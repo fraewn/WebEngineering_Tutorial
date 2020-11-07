@@ -11,8 +11,6 @@
 		}
 		 
 		#inner {
-		padding:2em; 
-		margin: 0.5em; 
 		background-color: white;
 		text-align: center;
 		box-sizing: border-box; 
@@ -20,17 +18,23 @@
 		
 		}
 		.column_left {
-		width: 50%;
+		width: 48.65%;
 		float: left; 
-		background-color: blue; 
+		background-color: white; 
 		text-align: right;
+		padding-right: 1%;
+		border: dashed blue; 
+		line-height: 2em 
 		}
 		
 		.column_right {
-		width: 50%;
-		float: left;  
-		background-color: red; 
+		width: 48.65%;
+		float: right;  
+		background-color: white; 
 		text-align: left; 
+		padding-left: 1%;
+		border: dashed red; 
+		line-height: 2em 
 		}
 		
 		/* Clear floats after the columns */
@@ -46,63 +50,78 @@
 <html>
 <title>Survey Form</title>
 <body>
-<div id="outer">
-	<h1>Survey Form</h1>
-	<div id="inner">
-	Let us know how we can improve freeCodeCamp<br>
-	
-	<div class="column_left">
-	<form>
-	  <label for="name">* Name:</label><br>
-	  <label for="email">* Email:</label><br>
-	  <label for="age">* Age:</label><br>
-	</form> 
-	
-	<form>
-		<label for="current_role">Which options best describes your current role?</label>
-	</form> 
-	
-	</div>
-	
-	
-	
-	<div class="column_right">
-	
-	<form >
-		<input type="text" id="name" name="name"><br>
-		<input type="text" id="email" name="email"><br>
-		<input type="text" id="age" name="age"><br>
-	</form> 
+	<div id="outer">
+		<h1>Survey Form</h1>
+		<div id="inner">
+		Let us know how we can improve freeCodeCamp<br>
+		
+			<div class="column_left">
+				<form> <br>
+				  <label for="name">* Name:</label><br>
+				  <label for="email">* Email:</label><br>
+				  <label for="age">* Age:</label><br>
+				</form> 
+				
+				<form> <br>
+					<label for="current_role">Which options best describes your current role?</label>
+				</form> 
+				
+				<form> <br>
+					<label for="recommendation_likelyness">* How likely is that you would recommend freeCodeCamp to a friend?</label>
+				</form> 
+				
+				<form> <br>
+					<label for="recommendation_likelyness">What do you like most in FCC:</label>
+				</form> 
+			</div>
+			
+			
+			
+			
+			<div class="column_right">
+				<form> <br>
+					<input type="text" id="name" name="name"><br>
+					<input type="text" id="email" name="email"><br>
+					<input type="text" id="age" name="age"><br>
+				</form> 
 
-	<form action="/action_page.php">
-	  <select id="current_role" name="current_role">
-		<option value="Student">Volvo</option>
-		<option value="Angestellt">Saab</option>
-		<option value="Leitende Position">Fiat</option>
-		<option value="Arbeitslos">Audi</option>
-	  </select>
-	  <input type="submit">
-	</form>
-	
-	
-	<form>
-		<input type="radio" id="female" name="gender" value="female">
-		<label for="female">Female</label><br>
-		<input type="radio" id="female" name="gender" value="female">
-		<label for="female">Female</label><br>
-		<input type="radio" id="female" name="gender" value="female">
-		<label for="female">Female</label><br>
-	</form> 
-	
-	<form >
-		<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
-	    <label for="vehicle3"> I have a boat</label>
-	</form> 
+				<form> <br>
+				  <select id="current_role" name="current_role">  <br>
+					<option value="Student">Student</option> <br>
+					<option value="Angestellt">Angestellt</option> <br>
+					<option value="Leitende Position">Leitende Position</option> <br>
+					<option value="Arbeitslos">Arbeitslos</option> <br>
+				</form> <br>
+				
+				<br>
+				
+				<form>
+					<input type="radio" id="definitely" name="likelyness" value="definitely">
+					<label for="definitely">Definitely</label><br>
+					<input type="radio" id="maybe" name="likelyness" value="maybe">
+					<label for="maybe">Maybe</label><br>
+					<input type="radio" id="not_sure" name="likelyness" value="not_sure">
+					<label for="not_sure">Not sure</label><br>
+				</form> 
+				
+				<form> <br>
+				  <select id="current_role" name="current_role">  <br>
+					<option value="Student">Student</option> <br>
+					<option value="Angestellt">Angestellt</option> <br>
+					<option value="Leitende Position">Leitende Position</option> <br>
+					<option value="Arbeitslos">Arbeitslos</option> <br>
+				</form> <br>
+				
+				<form> <br>
+					<input type="checkbox" id="Front-end" name="Front-end" value="Front-end Projects">
+					<label for="Front-end"> Front-end Projects</label> <br>
+					<input type="checkbox" id="Back-end" name="Back-end Projects" value="Back-end Projects">
+					<label for="Back-end"> Back-end Projects</label> <br>
+					<input type="checkbox" id="data_vis" name="data_vis" value="Data Visualization">
+					<label for="data_vis">Data Visualization</label> <br>
+				</form> 
+			</div>
+		</div>
 	</div>
-
-	
-	</div>
-</div>
-
 </body>
 </html> 
