@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<head>
+	<style>
+		#outer {
+		padding:2em; 
+		margin: 0.5em; 
+		background-color: #b2d6d1;
+		text-align: center;
+		box-sizing: border-box; 
+		font-family: Verdana
+		}
+		 
+		#inner {
+		padding:2em; 
+		margin: 0.5em; 
+		background-color: white;
+		text-align: center;
+		box-sizing: border-box; 
+		font-family: Verdana
+		
+		}
+		.column_left {
+		width: 50%;
+		float: left; 
+		background-color: blue; 
+		text-align: right;
+		}
+		
+		.column_right {
+		width: 50%;
+		float: left;  
+		background-color: red; 
+		text-align: left; 
+		}
+		
+		/* Clear floats after the columns */
+		.inner:after {
+		content: "";
+		display: table;
+		clear: both;
+		}
+		
+		
+	</style>
+</head>
+<html>
+<title>Survey Form</title>
+<body>
+<div id="outer">
+	<h1>Survey Form</h1>
+	<div id="inner">
+	Let us know how we can improve freeCodeCamp<br>
+	
+	<div class="column_left">
+	<form>
+	  <label for="name">* Name:</label><br>
+	  <label for="email">* Email:</label><br>
+	  <label for="age">* Age:</label><br>
+	</form> 
+	
+	<form>
+		<label for="current_role">Which options best describes your current role?</label>
+	</form> 
+	
+	</div>
+	
+	
+	
+	<div class="column_right">
+	
+	<form >
+		<input type="text" id="name" name="name"><br>
+		<input type="text" id="email" name="email"><br>
+		<input type="text" id="age" name="age"><br>
+	</form> 
+
+	<form action="/action_page.php">
+	  <select id="current_role" name="current_role">
+		<option value="Student">Volvo</option>
+		<option value="Angestellt">Saab</option>
+		<option value="Leitende Position">Fiat</option>
+		<option value="Arbeitslos">Audi</option>
+	  </select>
+	  <input type="submit">
+	</form>
+	
+	
+	<form>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+		<input type="radio" id="female" name="gender" value="female">
+		<label for="female">Female</label><br>
+	</form> 
+	
+	<form >
+		<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+	    <label for="vehicle3"> I have a boat</label>
+	</form> 
+	</div>
+
+	
+	</div>
+</div>
+
+</body>
+</html> 
