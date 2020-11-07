@@ -3,7 +3,6 @@
 	<style>
 		#outer {
 		padding:2em; 
-		margin: 0.5em; 
 		background-color: #b2d6d1;
 		text-align: center;
 		box-sizing: border-box; 
@@ -11,29 +10,29 @@
 		}
 		 
 		#inner {
-		background-color: white;
+		background-color: #fafafa;
 		text-align: center;
 		box-sizing: border-box; 
-		font-family: Verdana
+		font-family: Verdana;
+		padding-top: 2em;
+		padding-bottom: 2em; 
 		
 		}
 		.column_left {
-		width: 48.65%;
+		width: 49%;
 		float: left; 
-		background-color: white; 
+		background-color: #fafafa; 
 		text-align: right;
 		padding-right: 1%;
-		border: dashed blue; 
 		line-height: 2em 
 		}
 		
 		.column_right {
-		width: 48.65%;
+		width: 49%;
 		float: right;  
-		background-color: white; 
+		background-color: #fafafa; 
 		text-align: left; 
 		padding-left: 1%;
-		border: dashed red; 
 		line-height: 2em 
 		}
 		
@@ -49,8 +48,7 @@
 </head>
 <html>
 <title>Survey Form</title>
-<body>
-	<div id="outer">
+<body id="outer">
 		<h1>Survey Form</h1>
 		<div id="inner">
 		Let us know how we can improve freeCodeCamp<br>
@@ -73,20 +71,22 @@
 				<form> <br>
 					<label for="recommendation_likelyness">What do you like most in FCC:</label>
 				</form> 
+				
+				<form style="line-height:1em"> <br>
+					<label for="recommendation_likelyness">Things that should be improved in the future <br/>(Check all that apply):</label>
+				</form> 
 			</div>
-			
-			
 			
 			
 			<div class="column_right">
 				<form> <br>
-					<input type="text" id="name" name="name"><br>
-					<input type="text" id="email" name="email"><br>
-					<input type="text" id="age" name="age"><br>
+					<input type="text" id="name" name="name" value="Enter your name" style="color:#bbbabf"><br>
+					<input type="text" id="email" name="email" value="Enter your Email" style="color:#bbbabf"><br>
+					<input type="number" id="age" name="age" value="Age" min="12" max="100"  style="color:#bbbabf"><br>
 				</form> 
 
 				<form> <br>
-				  <select id="current_role" name="current_role">  <br>
+				  <select id="current_role" name="current_role" style="background-color:#f0f0f0">  <br>
 					<option value="Student">Student</option> <br>
 					<option value="Angestellt">Angestellt</option> <br>
 					<option value="Leitende Position">Leitende Position</option> <br>
@@ -105,7 +105,7 @@
 				</form> 
 				
 				<form> <br>
-				  <select id="current_role" name="current_role">  <br>
+				  <select id="current_role" name="current_role" style="background-color:#f0f0f0">  <br>
 					<option value="Student">Student</option> <br>
 					<option value="Angestellt">Angestellt</option> <br>
 					<option value="Leitende Position">Leitende Position</option> <br>
@@ -122,6 +122,5 @@
 				</form> 
 			</div>
 		</div>
-	</div>
 </body>
 </html> 
