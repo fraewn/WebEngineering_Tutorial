@@ -16,6 +16,7 @@
 		font-family: Verdana;
 		padding-top: 2em;
 		padding-bottom: 2em; 
+		color: #383838
 		
 		}
 		.column_left {
@@ -24,16 +25,21 @@
 		background-color: #fafafa; 
 		text-align: right;
 		padding-right: 1%;
-		line-height: 2em 
+		line-height: 2em; 
+		color: #383838; 
+		height:550px; 
+
 		}
 		
 		.column_right {
-		width: 49%;
+		width: 50%;
 		float: right;  
 		background-color: #fafafa; 
 		text-align: left; 
-		padding-left: 1%;
-		line-height: 2em 
+		padding-left: 0%;
+		line-height: 2em; 
+		color: #383838; 
+		height:550px
 		}
 		
 		/* Clear floats after the columns */
@@ -66,14 +72,14 @@
 				
 				<form> <br>
 					<label for="recommendation_likelyness">* How likely is that you would recommend freeCodeCamp to a friend?</label>
-				</form> 
+				</form> <br>
 				
-				<form> <br>
-					<label for="recommendation_likelyness">What do you like most in FCC:</label>
-				</form> 
+				<form> <br><br>
+					<label for="likemost">What do you like most in FCC:</label>
+				</form> <br>
 				
-				<form style="line-height:1em"> <br>
-					<label for="recommendation_likelyness">Things that should be improved in the future <br/>(Check all that apply):</label>
+				<form style="line-height:1.3em"> 
+					<label for="Front-end">Things that should be improved in the future <br/>(Check all that apply):</label>
 				</form> 
 			</div>
 			
@@ -82,20 +88,18 @@
 				<form> <br>
 					<input type="text" id="name" name="name" value="Enter your name" style="color:#bbbabf"><br>
 					<input type="text" id="email" name="email" value="Enter your Email" style="color:#bbbabf"><br>
-					<input type="number" id="age" name="age" value="Age" min="12" max="100"  style="color:#bbbabf"><br>
+					<input type="number" id="age" name="age" placeholder="Age" min="12" max="100"  style="color:#bbbabf"><br>
 				</form> 
 
 				<form> <br>
-				  <select id="current_role" name="current_role" style="background-color:#f0f0f0">  <br>
+				  <select id="current_role" name="current_role" style="background-color:#f0f0f0; display:block; margin-bottom:3em; margin-top: 0.5em">  <br>
 					<option value="Student">Student</option> <br>
 					<option value="Angestellt">Angestellt</option> <br>
 					<option value="Leitende Position">Leitende Position</option> <br>
 					<option value="Arbeitslos">Arbeitslos</option> <br>
 				</form> <br>
 				
-				<br>
-				
-				<form>
+				<form> <br>
 					<input type="radio" id="definitely" name="likelyness" value="definitely">
 					<label for="definitely">Definitely</label><br>
 					<input type="radio" id="maybe" name="likelyness" value="maybe">
@@ -105,12 +109,13 @@
 				</form> 
 				
 				<form> <br>
-				  <select id="current_role" name="current_role" style="background-color:#f0f0f0">  <br>
+				  <select id="likemost" name="likemost" style="background-color:#f0f0f0; display: block; margin-bottom:2.4em; margin-top: 0.2em">  <br>
+				    <option value="SelectOption">Select an option</option> <br>
 					<option value="Student">Student</option> <br>
 					<option value="Angestellt">Angestellt</option> <br>
 					<option value="Leitende Position">Leitende Position</option> <br>
 					<option value="Arbeitslos">Arbeitslos</option> <br>
-				</form> <br>
+				</form> 
 				
 				<form> <br>
 					<input type="checkbox" id="Front-end" name="Front-end" value="Front-end Projects">
