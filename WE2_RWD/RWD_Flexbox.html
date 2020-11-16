@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+	.flex-container{
+	  display: flex;
+	  height:500px;
+	  justify-content: space-around; 
+	}
+	
+	.flex-container-bottom {
+		display:flex; 
+		flex-direction: row;
+		height:500px;
+		justify-content: space-around; 
+		column-gap: 2%;
+	}
+
+	.flex-container-red {
+		background-color: #ff2500;
+		margin-top: 30px; 
+		height:300px;
+		margin-bottom:20px;
+	}
+
+	.flex-item-green {
+		background-color: #2cee27; 
+		flex-grow: 1;
+		
+	}
+
+	.flex-item-blue {
+		background-color: #0533ff; 
+		flex-grow:3;
+	}
+
+	.flex-item-pink {
+		background-color: #ea3efe;
+		flex-grow: 1; 
+		
+	}
+
+	/*MEDIA QUERIES */
+	@media screen and (max-width: 640px) and (min-width: 321px){
+	
+	.flex-container-bottom {
+		display:flex; 
+		flex-direction: row;
+		height:500px;
+		flex-wrap: wrap; 
+		column-gap: 2%;
+		row-gap: 2%;
+	}
+	.flex-item-pink {
+		background-color: #ea3efe;
+		flex-basis:100%
+	}
+	
+	
+	
+	
+	}
+	
+	@media screen and (max-width: 320px) {
+	.flex-container-red {
+		background-color: #ff2500;
+		margin-top: 0px; 
+		margin-bottom: 0px;
+		height: 50px;
+	}
+	.flex-container{
+	  display: flex;
+	}
+	.flex-container-bottom {
+		display:flex; 
+		flex-direction: column;
+		
+	}
+	.flex-item-blue {
+		background-color: #0533ff; 
+		flex-grow: 7;
+	}
+	.flex-item-pink {
+		background-color: #ea3efe;
+		flex-grow: 1; 
+	}
+	.flex-item-green {
+		background-color: #2cee27; 
+		flex-grow: 1; 
+	}
+	
+	
+	}
+
+	</style>
+</head>
+<title>RWD Example using Flexbox</title>
+<body>
+<div class="all">
+ <div class="flex-container flex-container-red">
+ <div></div>
+</div> 
+ <div class="flex-container-bottom">
+  <div class="flex-item-green"></div>
+  <div class="flex-item-blue"></div>
+  <div class="flex-item-pink"></div>
+</div>
+</body>
+</html> 
