@@ -1,0 +1,171 @@
+<!doctype html>
+<title>Holy Grail with Flexbox</title>
+<style>
+	body {
+		margin-top: 0px; 
+		margin-right: 0px; 
+		margin-left: 0px; 
+		margin-bottom: 0px; 
+	}
+		
+		
+	* {
+		box-sizing: border-box; 
+	}
+	
+	.flex-container {
+		display: flex;
+		flex-direction: column;
+		border: 10px transparent; 
+		border-radius: 10px; 
+	}
+	  
+	#layout {
+		display: flex;
+		flex: 1;
+	}
+	  
+	#layout > aside {
+		flex: 0 0 20vw;
+		order: 1;
+	}
+	  
+	#layout > article {
+		order: 2;
+	}
+
+	#layout > nav {
+		flex: 0 0 20vw; 
+		order: 3;
+	}
+  
+  
+	header {
+	    margin-top: -50px;
+		background: #c14f4f; 
+		color: white; 
+		text-align: left; 
+		font-size: 60px; 
+		line-height: 0.5em; 
+		height: 150px; 
+		padding: 0em; 
+		top: 0; 
+		width: 100%;
+	}
+  
+   .navlist {
+		display: inline-block; 
+	}
+  
+	.stylized_linkbox {
+		background-color: #6a709f; 
+		border: 3px solid white; 
+		border-radius: 10px; 
+		color: white; 
+		border-color: white; 
+		width: 	10%;
+		line-height: 5px;
+		text-align: center; 
+	}
+	
+	.links {
+		color: #000000;
+		text-decoration: none; 
+		font-size: 13px; 
+		font-weight: inherit;  
+	}
+	
+	.article{
+		color: white;
+		background: #6a9ebd;
+		text-align: center; 
+	}
+	
+	.side {
+		font-size: 50px; 
+		padding: 2em;
+		color: white; 
+		background: #c28281;
+		padding-top: 0em; 
+	}
+	
+	.footer {
+		background: #000000;
+		color: white; 
+		font-size: 30px; 
+		text-align: center; 
+		bottom: 0;
+		width: 100%;
+	}
+	
+	.navlist_footer {
+		display: inline-block;
+		font-size: 10px; 
+		line-height: 0em;
+	}
+	
+	.stylized_linkbox_footer {
+		color: white; 
+	}
+	
+	.links_footer {
+		color: white 
+	}
+	
+	
+</style>
+<body>
+  <div class="flex-container">
+	<header class="header">
+		<ul> 
+			<div style="text-align:center"> 
+			Header </br>
+			</div>
+			<li class="navlist stylized_linkbox">
+				<a class=links href="index.html"><h1>Home</h1></a>
+			</li>
+			<li class="navlist stylized_linkbox">
+				<a class=links href="staff.html"><h1>News</h1></a>
+			</li>
+			<li class="navlist stylized_linkbox">
+				<a class=links href="staff.html"><h1>Contact</h1></a>
+			</li>
+			<li class="navlist stylized_linkbox">
+				<a class=links href="staff.html"><h1>About</h1></a>
+			</li>
+		</ul>
+	</header>
+	<div id="layout">
+		<aside class="side">
+		left menu with many items
+		</aside>
+    
+		<article class="article">
+		Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean   
+		</article>
+    
+		<nav class="side">
+		right 
+		</nav>
+	</div>
+	<footer class="footer">
+		<ul> Footer: 
+			<li class="navlist_footer stylized_linkbox_footer">
+				<a class=links_footer href="index.html"><h1>Sitemap</h1></a>
+			</li>
+			<li class="navlist_footer stylized_linkbox_footer">
+				<a class=links_footer href="staff.html"><h1>Home</h1></a>
+			</li>
+			<li class="navlist_footer stylized_linkbox_footer">
+				<a class=links_footer href="staff.html"><h1>News</h1></a>
+			</li>
+			<li class="navlist_footer stylized_linkbox_footer">
+				<a class=links_footer href="staff.html"><h1>Contact</h1></a>
+			</li>
+			<li class="navlist_footer stylized_linkbox_footer">
+				<a class=links_footer href="staff.html"><h1>About</h1></a>
+			</li>
+		</ul>
+	</footer>
+  </div>
+</body>
