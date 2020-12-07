@@ -79,3 +79,7 @@ body {
     margin-left: 0.5em;
     position: center;
 }
+#hbrs_link{
+    color: #009ee0;
+    text-decoration: none;
+}
