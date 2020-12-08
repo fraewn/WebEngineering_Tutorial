@@ -1,0 +1,262 @@
+Performance without web worker:
+A new prime number is calculated in an interval of 0.1 milli seconds.
+Beginn: Performance at Tue Dec 08 2020 09:30:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 149.05499992892146
+Performance at Tue Dec 08 2020 09:30:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 30148.05499999784
+Performance at Tue Dec 08 2020 09:31:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 60152.054999955
+Performance at Tue Dec 08 2020 09:31:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 90144.98000009917
+Performance at Tue Dec 08 2020 09:32:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 120149.06500000507
+Performance at Tue Dec 08 2020 09:32:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 150162.239999976
+Performance at Tue Dec 08 2020 09:33:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 180149.65000003576
+Performance at Tue Dec 08 2020 09:33:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 210154.59499997087
+Performance at Tue Dec 08 2020 09:34:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 240151.4399999287
+Performance at Tue Dec 08 2020 09:34:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 270146.82499994524
+Performance at Tue Dec 08 2020 09:35:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 300191.43999996595 (animation starts to be not as smooth)
+Performance at Tue Dec 08 2020 09:35:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 330148.0000000447
+Performance at Tue Dec 08 2020 09:36:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 360164.7350001149
+Performance at Tue Dec 08 2020 09:36:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 390160.3800000157 (keeps getting a little worse)
+Performance at Tue Dec 08 2020 09:37:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 420170.1050000265
+Performance at Tue Dec 08 2020 09:37:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 450149.8900000006
+Performance at Tue Dec 08 2020 09:38:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 480144.4500000216 (prime numbers ~70000, now somebody who didn't know would recognize the non-smoothness at some times)
+Performance at Tue Dec 08 2020 09:38:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 510156.0200001113
+Performance at Tue Dec 08 2020 09:39:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 540145.1349998824
+Performance at Tue Dec 08 2020 09:39:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 570160.845000064
+Performance at Tue Dec 08 2020 09:40:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 600144.5299999323 (prime numbers ~80000)
+Performance at Tue Dec 08 2020 09:40:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 630151.509999996
+Performance at Tue Dec 08 2020 09:41:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 660194.2650000565
+Performance at Tue Dec 08 2020 09:41:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 690175.5599998869
+Performance at Tue Dec 08 2020 09:42:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 720166.7849998921
+Performance at Tue Dec 08 2020 09:42:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 750190.4700000305
+Performance at Tue Dec 08 2020 09:43:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 780144.314999925
+Performance at Tue Dec 08 2020 09:43:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 810154.4449999928
+Performance at Tue Dec 08 2020 09:44:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 840147.8800000623
+Performance at Tue Dec 08 2020 09:44:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 870208.064999897
+Performance at Tue Dec 08 2020 09:45:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 900144.0600000788
+Performance at Tue Dec 08 2020 09:45:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 930147.2849999554 (prime numbers ~125000)
+Performance at Tue Dec 08 2020 09:46:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 960174.5800001081
+Performance at Tue Dec 08 2020 09:46:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 990374.4900000747
+Performance at Tue Dec 08 2020 09:47:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1020143.5799999163
+Performance at Tue Dec 08 2020 09:47:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1050144.520000089
+Performance at Tue Dec 08 2020 09:48:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1080273.060000036
+Performance at Tue Dec 08 2020 09:48:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1110196.934999898
+Performance at Tue Dec 08 2020 09:49:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1140174.1549998987
+Performance at Tue Dec 08 2020 09:49:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1170286.7749999277 (prime numbers ~140.000)
+Performance at Tue Dec 08 2020 09:50:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1200180.0450000446
+Performance at Tue Dec 08 2020 09:50:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1230177.6449999306
+Performance at Tue Dec 08 2020 09:51:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1260146.2000000756
+Performance at Tue Dec 08 2020 09:51:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1290206.514999969
+Performance at Tue Dec 08 2020 09:52:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1320161.240000045
+Performance at Tue Dec 08 2020 09:52:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1350206.6349999513
+Performance at Tue Dec 08 2020 09:53:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1380183.3949999418 (prime numbers ~160000, the bar is visibly slower now, one can see the "steps" it makes)
+Performance at Tue Dec 08 2020 09:53:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1410187.494999962
+Performance at Tue Dec 08 2020 09:54:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1440148.8000000827
+Performance at Tue Dec 08 2020 09:54:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1470151.1750000063 (prime numbers ~170000, gets worse)
+Performance at Tue Dec 08 2020 09:55:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1500144.1349999513
+Performance at Tue Dec 08 2020 09:55:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1530144.8500000406
+Performance at Tue Dec 08 2020 09:56:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1560164.3000000622 (it's becoming more "steps")
+Performance at Tue Dec 08 2020 09:56:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1590194.5199999027 (prime numbers ~180000, it is getting slower now)
+Performance at Tue Dec 08 2020 09:57:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1620232.880000025
+Performance at Tue Dec 08 2020 09:57:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1650208.3999998868 (way slower)
+Performance at Tue Dec 08 2020 09:58:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1680198.524999898
+Performance at Tue Dec 08 2020 09:58:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1710152.8849999886
+Performance at Tue Dec 08 2020 09:59:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1740144.4900000934
+Performance at Tue Dec 08 2020 09:59:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1770143.9249999821
+Performance at Tue Dec 08 2020 10:00:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1800179.0750001092
+Performance at Tue Dec 08 2020 10:00:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1830263.035000069
+Performance at Tue Dec 08 2020 10:01:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1860208.1249998882
+Performance at Tue Dec 08 2020 10:01:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1890165.3499999084 (prime numbers ~200.000)
+Performance at Tue Dec 08 2020 10:02:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1920169.5999999065
+Performance at Tue Dec 08 2020 10:02:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 1950154.4800000265
+Performance at Tue Dec 08 2020 10:03:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 1980183.2649998832
+Performance at Tue Dec 08 2020 10:03:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2010253.9150000084
+Performance at Tue Dec 08 2020 10:04:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2040160.0349999499 (prime numbers ~210000, animation sometimes stops very very shortly)
+Performance at Tue Dec 08 2020 10:04:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2070239.5500000566
+Performance at Tue Dec 08 2020 10:05:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2100172.7150001097
+Performance at Tue Dec 08 2020 10:05:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2130213.3949999698
+Performance at Tue Dec 08 2020 10:06:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2160240.054999944
+Performance at Tue Dec 08 2020 10:06:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2190213.599999901
+Performance at Tue Dec 08 2020 10:07:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2220186.890000012
+Performance at Tue Dec 08 2020 10:07:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2250245.4349999316
+Performance at Tue Dec 08 2020 10:08:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2280200.4100000486 (prime numbers ~230000)
+Performance at Tue Dec 08 2020 10:08:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2310179.715000093
+Performance at Tue Dec 08 2020 10:09:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2340292.369999923
+Performance at Tue Dec 08 2020 10:09:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2370284.4549999572
+Performance at Tue Dec 08 2020 10:10:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2400143.880000105
+Performance at Tue Dec 08 2020 10:10:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2430224.3699999526
+Performance at Tue Dec 08 2020 10:11:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2460159.2149999924
+Performance at Tue Dec 08 2020 10:11:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2490314.1350001097
+Performance at Tue Dec 08 2020 10:12:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2520193.8750001136
+Performance at Tue Dec 08 2020 10:12:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2550354.1000001132 (prime numbers ~240000, animation gets stuck now sometimes)
+Performance at Tue Dec 08 2020 10:13:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2580150.8249999024
+Performance at Tue Dec 08 2020 10:13:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2610163.794999942
+Performance at Tue Dec 08 2020 10:14:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2640199.035000056
+Performance at Tue Dec 08 2020 10:14:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2670215.104999952
+Performance at Tue Dec 08 2020 10:15:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2700149.8799999245
+Performance at Tue Dec 08 2020 10:15:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2730223.035000032
+Performance at Tue Dec 08 2020 10:16:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2760177.614999935
+Performance at Tue Dec 08 2020 10:16:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2790201.1500000954
+Performance at Tue Dec 08 2020 10:17:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2820188.3650000673
+Performance at Tue Dec 08 2020 10:17:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2850175.030000042 (prime numbers ~260000, animation gets stuck the whole time now, steps are big)
+Performance at Tue Dec 08 2020 10:18:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2880155.9250000864
+Performance at Tue Dec 08 2020 10:18:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2910150.870000012
+Performance at Tue Dec 08 2020 10:19:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 2940162.8250000067
+Performance at Tue Dec 08 2020 10:19:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 2970366.5899999905
+Performance at Tue Dec 08 2020 10:20:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3000462.525000097
+Performance at Tue Dec 08 2020 10:20:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3030313.295
+Performance at Tue Dec 08 2020 10:21:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3060299.9950000085 (prime numbers ~270000, get stuck a lot now)
+Performance at Tue Dec 08 2020 10:21:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3090274.4299999904
+Performance at Tue Dec 08 2020 10:22:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3120144.6799999103
+Performance at Tue Dec 08 2020 10:22:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3150272.6249999832
+Performance at Tue Dec 08 2020 10:23:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3180321.095000021
+Performance at Tue Dec 08 2020 10:23:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3210188.210000051
+Performance at Tue Dec 08 2020 10:24:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3240272.720000008
+Performance at Tue Dec 08 2020 10:24:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3270345.0150000863 (gets stuck for longer and more the whole time)
+Performance at Tue Dec 08 2020 10:25:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3300145.0950000435
+Performance at Tue Dec 08 2020 10:25:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3330197.5149998907
+Performance at Tue Dec 08 2020 10:26:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3360231.0150000267 (gets stuck now more severely)
+Performance at Tue Dec 08 2020 10:26:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3390284.389999928
+Performance at Tue Dec 08 2020 10:27:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3420223.3249999117
+Performance at Tue Dec 08 2020 10:27:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3450344.3299999926
+Performance at Tue Dec 08 2020 10:28:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3480241.6300000623
+Performance at Tue Dec 08 2020 10:28:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3510168.6700000428
+Performance at Tue Dec 08 2020 10:29:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3540202.569999965
+Performance at Tue Dec 08 2020 10:29:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3570223.190000048
+Performance at Tue Dec 08 2020 10:30:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3600246.9250001013
+Performance at Tue Dec 08 2020 10:30:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3630214.660000056
+Performance at Tue Dec 08 2020 10:31:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3660163.2199999876
+Performance at Tue Dec 08 2020 10:31:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3690166.0050000064
+Performance at Tue Dec 08 2020 10:32:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3720210.9350000974
+Performance at Tue Dec 08 2020 10:32:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3750144.330000039
+Performance at Tue Dec 08 2020 10:33:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3780221.644999925
+Performance at Tue Dec 08 2020 10:33:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3810265.0099999737
+Performance at Tue Dec 08 2020 10:34:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3840489.319999935
+Performance at Tue Dec 08 2020 10:34:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3870257.1199999657
+Performance at Tue Dec 08 2020 10:35:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3900295.214999933
+Performance at Tue Dec 08 2020 10:35:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3930235.7950001024
+Performance at Tue Dec 08 2020 10:36:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 3960290.730000008
+Performance at Tue Dec 08 2020 10:36:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 3990166.4150001016
+Performance at Tue Dec 08 2020 10:37:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 4020201.8099999987
+Performance at Tue Dec 08 2020 10:37:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 4050143.810000038
+Performance at Tue Dec 08 2020 10:38:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 4080313.155000098
+Performance at Tue Dec 08 2020 10:38:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 4110176.5799999703
+Performance at Tue Dec 08 2020 10:39:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 4140145.174999954
+Performance at Tue Dec 08 2020 10:39:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 4170145.2349999454
+Performance at Tue Dec 08 2020 10:40:24 GMT+0100 (Mitteleuropäische Normalzeit) is: 4200143.575000111
+Performance at Tue Dec 08 2020 10:40:54 GMT+0100 (Mitteleuropäische Normalzeit) is: 4230145.555000054 (prime numbers ~331000 - didn't got stuck completely but one could definitely see that it got stuck a whole lot)
+
+
+Performance with Webworker
+A new prime number is calculated by the web worker in an interval of 0.001 milli seconds. (faster!!)
+Beginn: Performance at Tue Dec 08 2020 10:48:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 164.05000002123415
+Performance at Tue Dec 08 2020 10:49:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 30160.01999983564
+Performance at Tue Dec 08 2020 10:49:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 60158.76500005834
+Performance at Tue Dec 08 2020 10:50:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 90158.40999991633
+Performance at Tue Dec 08 2020 10:50:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 120167.96500002965
+Performance at Tue Dec 08 2020 10:51:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 150157.29999984615
+Performance at Tue Dec 08 2020 10:51:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 180157.34499995597
+Performance at Tue Dec 08 2020 10:52:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 210158.69499999098
+Performance at Tue Dec 08 2020 10:52:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 240168.89499989338
+Performance at Tue Dec 08 2020 10:53:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 270179.68499986455
+Performance at Tue Dec 08 2020 10:53:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 300157.8750000335
+Performance at Tue Dec 08 2020 10:54:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 330158.4600000642
+Performance at Tue Dec 08 2020 10:54:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 360158.5399999749
+Performance at Tue Dec 08 2020 10:55:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 390157.78999985196
+Performance at Tue Dec 08 2020 10:55:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 420161.5699999966
+Performance at Tue Dec 08 2020 10:56:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 450158.7199999485
+Performance at Tue Dec 08 2020 10:56:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 480184.4399999827
+Performance at Tue Dec 08 2020 10:57:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 510162.47999994084
+Performance at Tue Dec 08 2020 10:57:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 540161.1299999058
+Performance at Tue Dec 08 2020 10:58:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 570158.4699999075
+Performance at Tue Dec 08 2020 10:58:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 600160.0150000304
+Performance at Tue Dec 08 2020 10:59:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 630157.894999953
+Performance at Tue Dec 08 2020 10:59:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 660158.594999928
+Performance at Tue Dec 08 2020 11:00:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 690180.1399998367
+Performance at Tue Dec 08 2020 11:00:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 720158.7900000159 (animation still runs very smoothly)
+Performance at Tue Dec 08 2020 11:01:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 750157.2699998505
+Performance at Tue Dec 08 2020 11:01:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 780158.8749999646
+Performance at Tue Dec 08 2020 11:02:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 810158.2249999046
+Performance at Tue Dec 08 2020 11:02:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 840157.7699999325
+Performance at Tue Dec 08 2020 11:03:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 870199.4449999183
+Performance at Tue Dec 08 2020 11:03:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 900175.2899999265 (prime numbers ~150000, animation runs smooth as ever)
+Performance at Tue Dec 08 2020 11:04:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 930198.6399998423
+Performance at Tue Dec 08 2020 11:04:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 960239.515000023
+Performance at Tue Dec 08 2020 11:05:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 990158.4600000642
+Performance at Tue Dec 08 2020 11:05:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1020157.9299999867
+Performance at Tue Dec 08 2020 11:06:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1050157.8849998768
+Performance at Tue Dec 08 2020 11:06:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1080158.7749999017
+Performance at Tue Dec 08 2020 11:07:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1110175.0549999997
+Performance at Tue Dec 08 2020 11:07:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1140158.3749998827 (prime numbers ~180000, doesn't run exactly as smooth as before)
+Performance at Tue Dec 08 2020 11:08:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1170157.4399999809
+Performance at Tue Dec 08 2020 11:08:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1200164.0200000256
+Performance at Tue Dec 08 2020 11:09:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1230240.9850000404
+Performance at Tue Dec 08 2020 11:09:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1260157.544999849
+Performance at Tue Dec 08 2020 11:10:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1290161.7300000507
+Performance at Tue Dec 08 2020 11:10:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1320165.1599998586
+Performance at Tue Dec 08 2020 11:11:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1350223.8000000361 (prime numbers ~198000) a bit slower, not as smooth)
+Performance at Tue Dec 08 2020 11:08:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1170157.4399999809
+Performance at Tue Dec 08 2020 11:08:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1200164.0200000256
+Performance at Tue Dec 08 2020 11:09:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1230240.9850000404
+Performance at Tue Dec 08 2020 11:09:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1260157.544999849
+Performance at Tue Dec 08 2020 11:10:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1290161.7300000507
+Performance at Tue Dec 08 2020 11:10:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1320165.1599998586
+Performance at Tue Dec 08 2020 11:11:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1350223.8000000361
+Performance at Tue Dec 08 2020 11:14:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1530176.1249999981
+Performance at Tue Dec 08 2020 11:14:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1560221.794999903
+Performance at Tue Dec 08 2020 11:15:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1590158.6799998768
+Performance at Tue Dec 08 2020 11:15:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1620194.3049998954
+Performance at Tue Dec 08 2020 11:16:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1650157.3749999516
+Performance at Tue Dec 08 2020 11:16:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1680180.9449999128
+Performance at Tue Dec 08 2020 11:17:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1710158.3899999969
+Performance at Tue Dec 08 2020 11:17:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1740242.0699999202
+Performance at Tue Dec 08 2020 11:18:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1770227.6550000533
+Performance at Tue Dec 08 2020 11:18:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1800165.3050000314
+Performance at Tue Dec 08 2020 11:19:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1830174.3799999822
+Performance at Tue Dec 08 2020 11:19:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1860179.414999904
+Performance at Tue Dec 08 2020 11:20:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1890236.3749998622
+Performance at Tue Dec 08 2020 11:20:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1920159.489999991
+Performance at Tue Dec 08 2020 11:21:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 1950157.5700000394
+Performance at Tue Dec 08 2020 11:21:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 1980361.120000016
+Performance at Tue Dec 08 2020 11:22:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2010165.6599999405
+Performance at Tue Dec 08 2020 11:22:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2040157.1400000248
+Performance at Tue Dec 08 2020 11:23:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2070157.9849999398
+Performance at Tue Dec 08 2020 11:23:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2100170.6550000235
+Performance at Tue Dec 08 2020 11:24:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2130186.854999978
+Performance at Tue Dec 08 2020 11:24:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2160157.644999912 (prime numbers ~260000, get stucks for very short time now sometimes)
+Performance at Tue Dec 08 2020 11:25:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2190242.1299999114
+Performance at Tue Dec 08 2020 11:25:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2220211.2749998923
+Performance at Tue Dec 08 2020 11:26:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2250158.3300000057
+Performance at Tue Dec 08 2020 11:26:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2280168.5150000267
+Performance at Tue Dec 08 2020 11:27:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2310161.194999935
+Performance at Tue Dec 08 2020 11:27:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2340160.8149998356
+Performance at Tue Dec 08 2020 11:28:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2370157.205000054
+Performance at Tue Dec 08 2020 11:28:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2400159.144999925
+Performance at Tue Dec 08 2020 11:29:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2430212.5299999025
+Performance at Tue Dec 08 2020 11:29:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2460220.1249999925
+Performance at Tue Dec 08 2020 11:30:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2490221.9099998474
+Performance at Tue Dec 08 2020 11:30:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2520194.2600000184
+Performance at Tue Dec 08 2020 11:31:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2550213.414999889
+Performance at Tue Dec 08 2020 11:31:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2580195.279999869
+Performance at Tue Dec 08 2020 11:32:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2610157.755000051 (prime numbers ~300.000, animation definitely gets slightly stuck now sometimes)
+Performance at Tue Dec 08 2020 11:32:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2640157.7250000555
+Performance at Tue Dec 08 2020 11:33:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2670223.5799999908
+Performance at Tue Dec 08 2020 11:33:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2700176.680000033
+Performance at Tue Dec 08 2020 11:34:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2730207.274999935
+Performance at Tue Dec 08 2020 11:34:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2760220.349999843
+Performance at Tue Dec 08 2020 11:35:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2790244.9799999595
+Performance at Tue Dec 08 2020 11:35:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2820229.9450000282
+Performance at Tue Dec 08 2020 11:36:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2850257.8650000505
+Performance at Tue Dec 08 2020 11:36:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2880219.339999836
+Performance at Tue Dec 08 2020 11:37:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2910158.6649999954
+Performance at Tue Dec 08 2020 11:37:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 2940159.4149998855
+Performance at Tue Dec 08 2020 11:38:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 2970237.3349999543
+Performance at Tue Dec 08 2020 11:38:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3000334.4900000375
+Performance at Tue Dec 08 2020 11:39:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3030160.244999919
+Performance at Tue Dec 08 2020 11:39:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3060211.29999985
+Performance at Tue Dec 08 2020 11:40:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3090295.93500006
+Performance at Tue Dec 08 2020 11:40:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3120292.5650000107
+Performance at Tue Dec 08 2020 11:41:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3150157.690000022
+Performance at Tue Dec 08 2020 11:41:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3180157.995000016
+Performance at Tue Dec 08 2020 11:42:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3210171.1549998727
+Performance at Tue Dec 08 2020 11:42:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3240181.3850000035
+Performance at Tue Dec 08 2020 11:43:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3270159.2850000598
+Performance at Tue Dec 08 2020 11:43:32 GMT+0100 (Mitteleuropäische Normalzeit) is: 3300165.3700000606
+Performance at Tue Dec 08 2020 11:44:02 GMT+0100 (Mitteleuropäische Normalzeit) is: 3330212.5949999318 (prime numbers ~353000, animation runs slowlier and sometimes gets stuck but overall still okay)

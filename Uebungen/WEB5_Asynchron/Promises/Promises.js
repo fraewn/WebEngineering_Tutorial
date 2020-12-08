@@ -4,7 +4,7 @@
 // und das Ende aus B.txt stammen soll. Die beiden Dateien sollen also zeilenweise konkateniert werden.
 // Erzielen Sie max. Geschwindigkeit durch maximale Parallelität. Achten Sie gleichzeitig auf Korrektheit.
 // Verwenden Sie dabei ausschließlich die Promise API ohne async / await.
-// Text-Dateien: Siehe Ordner Resources, je 5000 Zeichen 'A' in A.txt und 'B' in B.txt (100 pro Zeile)
+// Text-Dateien: Siehe Ordner Resources, je 2423 Zeichen 'A' in A.txt und 'B' in B.txt (100 pro Zeile)
 
 
 let pathA = "resources/A.txt";
@@ -26,7 +26,6 @@ function writeToDoc(elementId, text){
     newTextNode.innerHTML = text;
     placeholder = document.getElementById("concat");
     placeholder.appendChild(newTextNode);
-
 }
 
 Promise.all([fetch(pathA).then(response => response.text()).then(splitAtLinebreak),

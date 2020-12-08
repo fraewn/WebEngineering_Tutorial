@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Promises Example</title>
+</head>
+<body>
+<!--<h2>Parallel loading of two text files via fetch, extracting each line and cocatenating them</h2>-->
+<div id="concat" style="font-size: 9px"></div>
+<script>
+    let pathA = "A.txt";
+    let pathB = "B.txt";
+
+    function splitAtLinebreak(t){
+        return t.split(/\n/);
+    }
+
+    function organizePrint(arrA, arrB){
+        for(let i=0; i < arrA.length; i++){
+            placeholder = document.getElementById("concat");
+            writeToDoc(placeholder,arrA[i].toString() + arrB[i].toString() + "<br>")
+        }
+    }
+
+    function writeToDoc(elementId, text){
+        newTextNode = document.createElement("p");
+        newTextNode.innerHTML = text;
+        placeholder = document.getElementById("concat");
+        placeholder.appendChild(newTextNode);
+
+    }
+
+    Promise.all([fetch(pathA).then(response => response.text()).then(splitAtLinebreak),
+        fetch(pathB).then(response => response.text()).then(splitAtLinebreak)])
+        .then(([arrayA, arrayB]) => {organizePrint(arrayA, arrayB)});
+</script>
+</body>
+</html>
