@@ -15,10 +15,10 @@ fs.writeFile(newfile, "");
 
     const lines1 = text1.split('\n');
     const lines2 = text2.split('\n');
-    console.log(lines1[0] + lines2[0]);
 
     let count = 0;
     for(const line of lines1){
-        fs.appendFile(newfile, line + lines2[count++]);
+        const newValue = line.replace(/(\r\n|\n|\r)/gm, "");
+        fs.appendFile(newfile, newValue + lines2[count++] + "\n");
     }
 })();
