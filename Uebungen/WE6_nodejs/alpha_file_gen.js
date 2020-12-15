@@ -1,26 +1,29 @@
-const limit = 123456
+fs = require('fs')
 
-const alphabet = [A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z];
+const limit = process.argv[2];
+let content = "";
+let newfile = 'generated_alpha.txt'
 
-round = 0;
+function getLine(i){
+    let res = "";
+    const charCodeAlphabetBegin = 65;
+    const amountLetters = 26;
+    let rest = i;
 
-// solange round=0
-// print each row one letter
-
-// solange round = 1;
-// print for each letter in alphabet all others (however only themselve and the bigger ones)
-
-// solange round = 2;
-// start again with begin and print AAA AAB AAC AAD _ AAZ, ABB, ABC, ABD, -ABZ, ACC, ACD,
-
-function alphaIterator(i){
-    return alphabet[i]
-}
-
-while(count < limit){
-    for(i=0; i++; i<alphabet.length){
-
+    while (rest >= amountLetters){
+        rest -= amountLetters;
+        res += String.fromCharCode(charCodeAlphabetBegin);
     }
-    ++count;
+    res += String.fromCharCode(charCodeAlphabetBegin + rest);
+    return res;
 }
 
+let i=0;
+while(i < limit){
+    content +=  getLine(i) + "\n";
+    i++;
+}
+
+fs.writeFile(newfile, content, function (err) {
+    if (err) return console.log(err);
+});

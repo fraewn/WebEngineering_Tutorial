@@ -1,4 +1,6 @@
 const fs = require('fs').promises;
+const {performance} = require('perf_hooks');
+const t0 = performance.now();
 
 const big_file1 = process.argv[2];
 const big_file2 = process.argv[3];
@@ -22,3 +24,5 @@ fs.writeFile(newfile, "");
         fs.appendFile(newfile, newValue + lines2[count++] + "\n");
     }
 })();
+
+console.log("Performance of merge_files.js: " + t0);

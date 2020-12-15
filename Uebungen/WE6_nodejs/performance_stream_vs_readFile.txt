@@ -1,0 +1,14 @@
+Performance of merge_files.js: 71.04639998078346
+Performance of merge_files.js: 38.95559999346733
+Performance of merge_files.js: 47.83790001273155
+Performance of merge_files.js: 45.28700000047684
+Performance of merge_files.js: 59.203400015830994
+
+
+Performance of merge_stream.js: 63.06310001015663
+Performance of merge_stream.js: 44.03949999809265
+Performance of merge_stream.js: 43.84419998526573
+Performance of merge_stream.js: 43.29129999876022
+Performance of merge_stream.js: 63.2509999871254
+
+Ergebnis: Die Performanz von merge_stream.js war konstant etwas besser.

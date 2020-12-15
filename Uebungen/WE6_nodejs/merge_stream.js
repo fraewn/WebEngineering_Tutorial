@@ -1,5 +1,7 @@
 const fs = require("fs");
 const { pipeline } = require('stream/promises');
+const {performance} = require('perf_hooks');
+const t0 = performance.now();
 
 const big_file1 = process.argv[2];
 const big_file2 = process.argv[3];
@@ -52,8 +54,10 @@ function merge(lines1, lines2){
     }
 }
 
+
 streamBigFile1().catch(console.error);
 streamBigFile2().catch(console.error);
+console.log("Performance of merge_stream.js: " + t0);
 
 
 
