@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "es-dev-server": "^2.0.2"
+  },
+  "scripts": {
+    "serve": "es-dev-server --app-index index.html --node-resolve --watch --open"
+  },
+  "dependencies": {
+    "lit-element": "^2.4.0"
+  }
+}
