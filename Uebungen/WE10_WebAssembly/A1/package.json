@@ -1,0 +1,8 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "http-server": "^0.12.3",
+    "wat-wasm": "^1.0.26",
+    "wat2wasm": "^3.0.0"
+  }
+}

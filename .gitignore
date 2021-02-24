@@ -1,4 +1,7 @@
 .idea/
+
+node_modules/
+
 Uebungen/WE6_nodejs/node_modules
 Uebungen/WE7_modular_web/lit-element-starter-js
 /Uebungen/WE7_modular_web/a2_menu_component/node_modules/
@@ -9,3 +12,4 @@ Uebungen/WE8_Uebung8_PWA
 Uebungen/WE8_PWA/cert
 Uebungen/WE8_PWA/node_modules
 Uebungen/WE8_PWA/public/images
+
