@@ -1,3 +1,4 @@
+//++++++++++++ variables +++++++++++++++
 // json object
 // root (level 0)
 let webKnowledge;
@@ -6,26 +7,22 @@ let html_content;
 let css_content;
 let js_content;
 
-// current set topic (out of level 1)
+// internal states
+// manage state of current set topic (out of json object level 1)
 let activeTopic;
+// manage state of current number of sub menu options
+let currentNumberOfSubMenuOptions = 0;
 
 // html elements
 // main menu
 let html = document.getElementById("html");
 let css = document.getElementById("css");
 let javascript = document.getElementById("javascript");
-// sub menu
-let sub0 = document.getElementById("sub0");
-let sub1 = document.getElementById("sub1");
-let sub2 = document.getElementById("sub2");
-let sub3 = document.getElementById("sub3");
-let sub0Content;
-let sub1Content;
-let sub2Content;
-let sub3Content;
 // "article" element where content is displayed
 let contentRoot = document.getElementById("contents");
 
+
+// +++++++++++ application code ++++++++++
 // fetch json with content information
 (async () => {
     let resultA = await fetch("webeng_info.json");
@@ -36,65 +33,84 @@ let contentRoot = document.getElementById("contents");
     js_content = webKnowledge['javascript'];
 })();
 
-// main menu (html, css, java script, other)
+// main menu
 html.addEventListener("click", function () { manageTopContent("html")});
 css.addEventListener("click", function () { manageTopContent("css")});
 javascript.addEventListener("click", function () {manageTopContent("javascript")});
 
-sub0.addEventListener("click", function () {
-    contentRoot.innerText = "";
-    fillContents(activeTopic, sub0Content)});
-sub1.addEventListener("click", function () {
-    contentRoot.innerText = "";
-    fillContents(activeTopic, sub1Content)});
-sub2.addEventListener("click", function () {
-    contentRoot.innerText = "";
-    fillContents(activeTopic, sub2Content)});
-sub3.addEventListener("click", function () {
-    contentRoot.innerText = "";
-    fillContents(activeTopic, sub3Content)});
-
-
-// manage top menu and fill submenu accordingly
+// manage top menu and create submenu depending on which top menu option is selected
 function manageTopContent(subject){
     activeTopic = subject;
     if(activeTopic == "html"){
-        fillSubTopics(html_content);
+        createSubTopics(html_content);
     }
     else if(activeTopic == "css"){
-        fillSubTopics(css_content);
+        createSubTopics(css_content);
     }
     else if (activeTopic == "javascript"){
-        fillSubTopics(js_content);
+        createSubTopics(js_content);
     }
     else {
         // other
     }
-    // set global subContent variables
-    sub0Content = sub0.innerText;
-    sub1Content = sub1.innerText;
-    sub2Content = sub2.innerText;
-    sub3Content = sub3.innerText;
+    // everytime a new top menu option is selected, delete old content from article
+    contentRoot.innerText = "";
 }
 
-function fillSubTopics(subject){
+// depending on which top menu item is selected, create the sub menu options
+// and name them like the level-2 entries in json for this topic
+function createSubTopics(subject){
+    // how many sub menu options are needed (default 0)
     let countNecessarySubMenuEntries = 0;
-    for (let i = 0; i < 4; i++){
-        document.getElementById("sub" + i).innerHTML = "";
-    }
+    // remove all old sub menu options (that were needed for a different selected top menu option)
+    removeSubMenuEntries(currentNumberOfSubMenuOptions);
+    // read new sub menu options from json
     for (let i = 0; i < Object.keys(subject).length; i++) {
-        let currentKey = Object.keys(subject)[i];
-        document.getElementById("sub" + i).innerHTML = currentKey;
+        let subMenuItemName = Object.keys(subject)[i];
+        createSubMenuOption(i, subMenuItemName);
         countNecessarySubMenuEntries++;
     }
-    console.log(countNecessarySubMenuEntries)
-    removeSubMenuEntries(countNecessarySubMenuEntries);
+    currentNumberOfSubMenuOptions = countNecessarySubMenuEntries;
+}
+
+// create a sub menu item of this form (example sub menu item with number 0):
+// <div class="stylized_left_side_links" id="subMenuOption0">
+//      <a class="links">
+//          <h1 id="sub0New">headings</h1>
+//      </a>
+// </div>
+function createSubMenuOption(number, subMenuItemName){
+    let sideleftRoot = document.getElementById("sideleft");
+    let subMenuOptionElementId = "subMenuOption" + number;
+    window["sub" + number + "New"] = document.createElement("div");
+    window["sub" + number + "New"].className = "stylized_left_side_links";
+    window["sub" + number + "New"].id = subMenuOptionElementId;
+    window["sub" + number + "LinkNew"] = document.createElement("a");
+    window["sub" + number + "LinkNew"].className = "links";
+    window["sub" + number + "H1New"] = document.createElement("h1");
+    let textElementId = "sub" + number + "New";
+    window["sub" + number + "H1New"].id = textElementId;
+    window["sub" + number + "ContentNew"] = document.createTextNode(subMenuItemName);
+    window["sub" + number + "ContentNewNew"] = subMenuItemName;
+    sideleftRoot.appendChild(window["sub" + number + "New"]);
+    window["sub" + number + "New"].appendChild(window["sub" + number + "LinkNew"]);
+    window["sub" + number + "LinkNew"].appendChild(window["sub" + number + "H1New"]);
+    window["sub" + number + "H1New"].appendChild(window["sub" + number + "ContentNew"]);
+    let newSubMenuOption = document.getElementById(textElementId);
+
+    // add event listener for this submenu item
+    newSubMenuOption.addEventListener("click", function(){
+        // clear old content from article
+        contentRoot.innerText = "";
+        // depending on which sub menu item is clicked, fill article up with new content from json
+        fillContents(activeTopic, window["sub" + number + "ContentNewNew"]);
+    });
 }
 
 // fill up content depending on which subtopic is selected
 function fillContents(activeContent, subTopic){
     Object.entries(webKnowledge[activeContent][subTopic]).forEach((key, value) => {
-        // content
+        // json "content"
         if(key[value] == "content"){
             let head = document.createElement("h2");
             let headContent = document.createTextNode("Erklärung:")
@@ -105,7 +121,7 @@ function fillContents(activeContent, subTopic){
             entry.appendChild(entryContent);
             contentRoot.appendChild(entry);
         }
-        // references is array and needs special treatment
+        // json "references" (is array and needs special treatment)
         else {
             let head = document.createElement("small");
             let headContent = document.createTextNode("References: ")
@@ -120,19 +136,16 @@ function fillContents(activeContent, subTopic){
     });
 }
 
-// removes elements, but obviously they are still removed when you click on the next top menu item
-// better would be if they were added at the point where you click on a top menu item - in the necessary amount - and not before
-function removeSubMenuEntries(necessaryEntries){
-    console.log("hllo");
-    let countSubMenuOptionsToRemove = 4 - necessaryEntries;
-    let subMenu = document.getElementById("sideleft");
-    for(let i = 0; i <= countSubMenuOptionsToRemove; i++){
-        console.log("sub" + (necessaryEntries + i));
-        let subMenuEntry = document.getElementById("subMenuOption" + (necessaryEntries + i));
-        subMenu.removeChild(subMenuEntry);
-        console.log("hllo"+i);
+// remove the old sub menu entries when a new top menu item is selected
+function removeSubMenuEntries(entriesToBeRemoved) {
+    // if there are no sub menu item yet, none need to removed
+    if (!currentNumberOfSubMenuOptions == 0) {
+        // root html element for all sub menu items
+        let subMenu = document.getElementById("sideleft");
+        // for all entries
+        for (let i = 0; i < entriesToBeRemoved; ++i) {
+            let subMenuEntry = document.getElementById("subMenuOption" + (i));
+            subMenu.removeChild(subMenuEntry);
+        }
     }
-
-
-
 }

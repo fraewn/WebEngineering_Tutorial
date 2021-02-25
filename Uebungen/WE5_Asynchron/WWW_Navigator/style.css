@@ -126,3 +126,20 @@ header {
     padding: 1px;
     margin-top: 1em;
 }
+
+.stylized_left_side_links2 {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: inherit;
+    background-color: #6a709f;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    border-color: white;
+    width: 	80%;
+    line-height: 5px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 1em;
+}
