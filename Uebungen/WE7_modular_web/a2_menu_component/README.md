@@ -21,3 +21,8 @@ npm i -D es-dev-server
 ```
 npm run serve
 ```
+
+*install storybook with  npm v7 and node v15 
+```
+npx --legacy-peer-deps sb init
+```

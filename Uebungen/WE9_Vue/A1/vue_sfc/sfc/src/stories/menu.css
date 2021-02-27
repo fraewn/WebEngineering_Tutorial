@@ -1,0 +1,21 @@
+.inline {
+    display: inline-block;
+}
+.stylized_linkbox {
+    background-color: #6a709f;
+    border: 3px solid;
+    border-radius: 10px;
+    color: #6a709f;
+    border-color: black;
+    width: 10%;
+    line-height: 5px;
+    text-align: center;
+    margin: 1em;
+}
+
+.links {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: inherit;
+}
