@@ -19,8 +19,10 @@
 <script>
     document.getElementById("startButton").onclick = function(){
         try {
-            WebAssembly.instantiateStreaming(fetch("/ggt.wasm")).then(wasm => {
-                const ggt = wasm.instance.exports.ggt;
+            WebAssembly.
+            instantiateStreaming(fetch('./main.wasm')).
+            then(wasm => {
+                const ggt = wasm.instance.exports.gcd;
                 document.getElementById("result").innerText = `${ggt(10, 20)}`;
             });
         }
