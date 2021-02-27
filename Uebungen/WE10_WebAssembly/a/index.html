@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>10.2 WWW</title>
+	<meta charset="utf-8">
+	<script type="module">
+		import {countPrimes} from './10_2_PrimzahlenAlgo_JS.js';
+		
+		let until = 100000;
+		
+		let jsStart = performance.now()
+		let jsRes = countPrimes(until);
+		let jsEnd = performance.now()
+		document.getElementById("js").textContent = "JS brauchte  " + (jsEnd - jsStart) + "ms - Ergebnis: "+jsRes;
+		
+		
+		async function fetchAndInstantiate(){
+			const response = await fetch("10.2_watCode.wasm");
+			const buffer = await response.arrayBuffer();
+			const wasm = await WebAssembly.instantiate(buffer);
+			const wasmInstance = wasm.instance;
+			
+			let wasmStart = performance.now()
+			let wasmRes = wasmInstance.exports.countPrimes(until);
+			let wasmEnd = performance.now()
+			document.getElementById("wasm").textContent = "WASM brauchte  " + (wasmEnd - wasmStart) + "ms - Ergebnis: "+wasmRes;
+				
+		}
+		fetchAndInstantiate();
+		
+	</script>
+</head>
+
+<body>
+
+		<div id="js">
+		</div>
+		
+		<div id="wasm">
+		</div>
+		
+</body>
+
+</html>
