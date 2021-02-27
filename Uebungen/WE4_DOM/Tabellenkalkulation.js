@@ -16,7 +16,7 @@ let contents = document.querySelectorAll("[contenteditable=true]");
             let b = parseInt(document.getElementById("b").innerHTML);
 
             console.log(equationText);
-            if(equationText === "=SUM(A2,B2)") {
+            if(equationText === "=SUM(A2:B2)") {
                 // remove user input
                 equation.firstChild.remove();
                 // calculate new sum
@@ -25,7 +25,7 @@ let contents = document.querySelectorAll("[contenteditable=true]");
                 equation.appendChild(sum);
             }
 
-            if(equationText === "=PRODUCT(A2,B2)"){
+            if(equationText === "=PRODUCT(A2:B2)"){
                 // remove user input
                 equation.firstChild.remove();
                 // calculate new sum

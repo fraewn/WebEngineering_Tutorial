@@ -1,6 +1,5 @@
 document.getElementById("enterItemButton").onclick = function(){
     let einkaufsliste = document.getElementById("einkaufsliste");
-
     let newListItem = document.createElement("li");
     let input = document.getElementById("enterNewItemTextInput")
     let item = input.value;
