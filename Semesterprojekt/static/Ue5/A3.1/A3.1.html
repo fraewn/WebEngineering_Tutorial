@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+    #myProgress {
+        width: 100%;
+        background-color: #ddd;
+    }
+
+    #myBar {
+        width: 100%;
+        height: 30px;
+        background-color: dodgerblue;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Calculate Primes without Webworker</title>
+</head>
+<body>
+<h2>Performance (measured each 30 secs)</h2>
+<div id="performance"></div>
+<div id="myProgress">
+    <div id="myBar"></div>
+</div>
+<p></p>
+<h2>Calculated Prime Numbers</h2>
+<p id="primeplace"></p>
+<script>
+    // animation
+    const bar = document.getElementById("myBar");
+    let loadingBar = requestAnimationFrame(move);
+    let width = 1;
+    let count = 1;
+    function move() {
+        width += count;
+        if(width===100){
+            count = -1;
+        }
+        if(width===0){
+            count = 1;
+        }
+        bar.style.width = width + "%";
+        loadingBar = requestAnimationFrame(move);
+    }
+
+    // prime calc
+    function isPrime(prime) {
+        for (let i = 2n; i < prime; i++) {
+            if (prime % i === 0n) {
+                return false;
+            }
+        }
+        writeToDoc("primeplace", prime.toString() + ", ")
+    }
+
+    function generatePrimes() {
+        let number = 2n;
+        setInterval(()=>{isPrime(number++)}, 0.1);
+    }
+
+    generatePrimes();
+
+    // performance
+    function measurePerformance(){
+        let d = new Date();
+        // at begin
+        setTimeout(_=>writeNewNodeToDoc("performance", "Beginn: Performance at " + new Date() + " is: " + performance.now()), 0);
+        // every 30 sec
+        setInterval(_=>writeNewNodeToDoc("performance", "Performance at " + new Date() + " is: " + performance.now()), 30 * 1000)
+        /*setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 0);
+        setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 60*1000);
+        setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 5*60*1000);
+        setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 10*60*1000);
+        setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 15*60*1000);
+        setTimeout(_=>writeToDoc("performance", "Performance at " + d.toDateString() + "is: " + performance.now()), 20*60*1000);*/
+    }
+
+    measurePerformance();
+
+    // helper functions
+    function writeNewNodeToDoc(elementId, text){
+        let newTextNode = document.createElement("p");
+        newTextNode.innerHTML = text;
+        let placeholder = document.getElementById(elementId);
+        placeholder.appendChild(newTextNode);
+    }
+
+    function writeToDoc(elementId, text){
+        document.getElementById(elementId).innerHTML += text;
+    }
+</script>
+</body>
+</html>

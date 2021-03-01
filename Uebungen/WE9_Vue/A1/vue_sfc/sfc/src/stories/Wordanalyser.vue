@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="wordanalyser">
     <h1>{{ msg }}</h1>
     <form>
       <label for="eingabe">Eingabe: </label>
@@ -12,6 +12,7 @@
 </template>
 
 <script>
+import './wordanalyser.css';
 export default {
   name: 'Wordanalyser',
   props: {

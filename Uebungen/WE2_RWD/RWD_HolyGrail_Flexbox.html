@@ -5,9 +5,9 @@
 		margin-top: 0px; 
 		margin-right: 0px; 
 		margin-left: 0px; 
-		margin-bottom: 0px; 
+		margin-bottom: 0px;
+		height: 100%;
 	}
-		
 		
 	* {
 		box-sizing: border-box; 
@@ -23,6 +23,7 @@
 	#layout {
 		display: flex;
 		flex: 1;
+		margin-top: 14.5vh;
 	}
 	  
 	#layout > aside {
@@ -39,18 +40,19 @@
 		order: 3;
 	}
   
-  
 	header {
-	    margin-top: -50px;
+	    margin-top: 0px;
 		background: #c14f4f; 
 		color: white; 
 		text-align: left; 
-		font-size: 60px; 
+		font-size: 3vw;
 		line-height: 0.5em; 
-		height: 150px; 
+		height: 2.5em;
 		padding: 0em; 
 		top: 0; 
 		width: 100%;
+		position: fixed;
+		flex-shrink: 1;
 	}
   
    .navlist {
@@ -78,29 +80,36 @@
 	.article{
 		color: white;
 		background: #6a9ebd;
-		text-align: center; 
+		text-align: center;
+		height: 75vh;
+		padding-top: 2em;
+		flex-grow: 2;
 	}
 	
 	.side {
-		font-size: 50px; 
+		font-size: 3vw;
 		padding: 2em;
 		color: white; 
 		background: #c28281;
-		padding-top: 0em; 
+		padding-top: 0.7em;
+		height: 75vh;
+		flex-grow: 1;
 	}
 	
 	.footer {
 		background: #000000;
 		color: white; 
-		font-size: 30px; 
-		text-align: center; 
-		bottom: 0;
+		font-size: 2vw;
+		text-align: center;
 		width: 100%;
+		bottom: 0;
+		position: absolute;
+		flex-shrink: 1;
 	}
 	
 	.navlist_footer {
 		display: inline-block;
-		font-size: 10px; 
+		font-size: 0.5vw;
 		line-height: 0em;
 	}
 	
@@ -149,7 +158,7 @@
 		</nav>
 	</div>
 	<footer class="footer">
-		<ul> Footer: 
+		<ul> Footer:
 			<li class="navlist_footer stylized_linkbox_footer">
 				<a class=links_footer href="index.html"><h1>Sitemap</h1></a>
 			</li>

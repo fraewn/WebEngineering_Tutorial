@@ -2,20 +2,21 @@
     display: inline-block;
 }
 .stylized_linkbox {
-    background-color: #6a709f;
-    border: 3px solid;
-    border-radius: 10px;
-    color: #6a709f;
-    border-color: black;
-    width: 10%;
+    background-color: #e6c300;
+    border: 0.3em solid;
+    border-radius: 6vw;
+    color: #e6c300;
+    border-color: #2c3e50;
+    width: 	10vw;
     line-height: 5px;
     text-align: center;
-    margin: 1em;
+    margin: 1.5vw;
+    font-size: 0.6vw;
+    font-family: Verdana;
+    height: auto;
 }
 
 .links {
-    color: #000000;
+    color: #2c3e50;
     text-decoration: none;
-    font-size: 13px;
-    font-weight: inherit;
 }

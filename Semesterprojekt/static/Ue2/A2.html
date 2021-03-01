@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin-top: 0px;
+            margin-right: 0px;
+            margin-left: 0px;
+            margin-bottom: 0px;
+        }
+
+        .all {
+            display: grid;
+            grid-template-columns: 100%;
+            grid-template-rows: 10% 10% 70% 10%;
+            grid-column-gap: 0%;
+            grid-row-gap: 0%;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: #ff2500;
+            grid-column-start: 1;
+            grid-row-start: 1;
+        }
+        .green {
+            background-color: #2cee27;
+            grid-column-start: 1;
+            grid-row-start: 2;
+
+        }
+        .blue {
+            background-color: #0533ff;
+            grid-column-start: 1;
+            grid-row-start: 3;
+
+        }
+        .pink {
+            background-color: #ea3efe;
+            grid-column-start: 1;
+            grid-row-start: 4;
+
+        }
+
+
+        /* Media queries */
+        /* Mobile First */
+        @media screen and (min-width: 360px) and (max-width: 959px){
+            body {
+                margin-top: 14px;
+                margin-right: 12px;
+                margin-left: 12px;
+                margin-bottom: 0px;
+            }
+            .all {
+                display: grid;
+                grid-template-columns: auto auto auto;
+                grid-template-rows: 20% 70% 10%;
+                grid-column-gap: 0.5%;
+                grid-row-gap: 0.5%;
+                /* avoid scrollbar */
+                height: 95vh;
+            }
+
+            .header {
+                background-color: #ff2500;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                margin-bottom: 5px;
+            }
+            .green {
+                background-color: #2cee27;
+                grid-column-start: 1;
+                grid-row-start: 2;
+
+            }
+            .blue {
+                background-color: #0533ff;
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+
+            }
+            .pink {
+                background-color: #ea3efe;
+                grid-column-start: 1;
+                grid-column-end: 4;
+                grid-row-start: 3;
+            }
+        }
+
+        @media screen and (min-width: 960px) {
+            body {
+                margin-top: 30px;
+                margin-right: 40px;
+                margin-left: 40px;
+                margin-bottom: 30px;
+            }
+            .all {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                grid-template-rows: 40% 60%;
+                grid-column-gap: 0.5%;
+                grid-row-gap: 2%;
+                /* avoid scrollbar */
+                height: 92vh;
+            }
+
+            .header {
+                background-color: #ff2500;
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+            .green {
+                background-color: #2cee27;
+                grid-column-start: 1;
+                grid-row-start: 2;
+
+            }
+            .blue {
+                background-color: #0533ff;
+                grid-column-start: 2;
+                grid-column-end: 4;
+                grid-row-start: 2;
+
+            }
+            .pink {
+                background-color: #ea3efe;
+                grid-column-start: 4;
+                grid-row-start: 2;
+
+            }
+        }
+    </style>
+</head>
+<title>RWD Example using Grid</title>
+<body>
+<div class="all">
+    <div class="header"> </div>
+    <div class="green"> </div>
+    <div class="blue"> </div>
+    <div class="pink"> </div>
+</div>
+</body>
+</html>

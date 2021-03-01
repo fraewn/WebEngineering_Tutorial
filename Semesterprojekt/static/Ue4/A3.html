@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<style>
+    table, th, td {
+        border: 1px solid black;
+    }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <title>Tabellenkalkulation</title>
+</head>
+<body>
+<h1> Tabellenkalkulation mit contentEditable</h1>
+<span>Um eine Summe bzw. ein Produkt zu berechnen, geben Sie die Zahlen sowie im Ergebnisfeld =SUM(A2:B2) bzw. =PRODUCT(A2:B2) ein und klicken auf einen Bereich außerhalb der Tabelle.</span>
+<table style="width:30%">
+    <tr>
+        <td contenteditable="false">a = </td>
+        <td id="a" class="changeable" contenteditable="true">5</td>
+    </tr>
+    <tr>
+        <td contenteditable="false">b = </td>
+        <td id="b" contenteditable="true">10</td>
+    </tr>
+    <tr>
+        <td contenteditable="false">Summe = </td>
+        <td id="equation" contenteditable="true"></td>
+    </tr>
+</table>
+<script src="A3.js"></script>
+
+</body>
+</html>

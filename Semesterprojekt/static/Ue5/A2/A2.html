@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Asynch/ Await</title>
+</head>
+<body>
+<div id="concat" style="font-size: 9px"></div>
+<script>
+    let pathA = "A.txt";
+    let pathB = "B.txt";
+
+    async function splitAtLinebreak(text) {
+        let arr = text.split(/\n/);
+        return arr;
+    }
+
+    async function organizePrint(arrA, arrB){
+        for(let i=0; i < arrA.length; i++){
+            placeholder = document.getElementById("concat");
+            writeToDoc(placeholder,arrA[i].toString() + arrB[i].toString() + "<br>")
+        }
+    }
+
+    async function writeToDoc(elementId, text){
+        newTextNode = document.createElement("p");
+        newTextNode.innerHTML = text;
+        placeholder = document.getElementById("concat");
+        placeholder.appendChild(newTextNode);
+    }
+
+    async function fetchAndWriteToDoc(){
+        let dataA = await fetch(pathA);
+        let dataB = await fetch(pathB);
+        textA = await dataA.text()
+        textB = await dataB.text();
+        arrA = await splitAtLinebreak(textA);
+        arrB = await splitAtLinebreak(textB);
+        await organizePrint(arrA, arrB);
+    }
+
+    fetchAndWriteToDoc();
+
+</script>
+</body>
+</html>

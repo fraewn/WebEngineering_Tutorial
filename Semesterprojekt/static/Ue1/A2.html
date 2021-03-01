@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>A2</title>
+</head>
+<body>
+<h2>Aufgabe 1.2 - HTTP</h2>
+<p>Sie bekommen im Browser den HTTP Status Code 200. Was bedeutet das?</p>
+<ul>
+    <li>"OK" - Der Request wurde bearbeitet und man bekommt das Ergebnis der Anfrage in der Response</li>
+</ul>
+<p>Sie bekommen im Browser den HTTP Status Code 301. Was hat das zu bedeuten?</p>
+<ul>
+    <li>"Moved Permanently"</li>
+    <li>Die Adresse war veraltet und man bekommt die neue Adresse im Location-Header-Feld überliefert (Redirect) </li>
+</ul>
+<p>Sie bekommen im Browser den HTTP Status Code 400. Was hat das zu bedeuten? Was können Sie dagegen tun?</p>
+<ul>
+    <li>"Bad Request"</li>
+    <li>Es gab einen Fehler im Request. Als Endnutzer ohne weiteres Wissen kann man wenig tun, als z.B. mit Suchmaschinen nach einer Alternative schauen. Als Entwickler kann man in seinem Request auf Fehlersuche gehen, z.B. mit den Dev-Tools im Browser oder über die Konsole. </li>
+</ul>
+<p>Sie bekommen im Browser den HTTP Status Code 403. Was hat das zu bedeuten? Was können Sie dagegen tun?</p>
+<ul>
+    <li>"Forbidden"</li>
+    <li>Als Client bin ich nicht berechtigt, auf die in meinem Request angefragte Ressource zuzugreifen. Dies kann z.B. daran liegen, dass man erst eine Authentifizierung z.B. in Form eines Logins durchlaufen muss. </li>
+</ul>
+<p>In einer Webanwendung benötigen Sie eine OPTIONS-Anfrage, die die Optionen des Servers vor dem eigentlichen Zugriff erfragen soll. Aus Performanzgründen soll die Abfrage jedoch cacheable sein. Wie könnten Sie dafür eine Lösung angehen?</p>
+<ul>
+    <li>Die "Optionen" des Servers, also z.B. technische Daten, als Ressourcen hinterlegen und dann mit GET abfragen (und evtl. durch Authorisierung schützen)</li>
+</ul>
+</body>
+</html>

@@ -13,6 +13,6 @@ const Template = (args, { argTypes }) => ({
 
 export const Primary = Template.bind({});
 Primary.args = {
-    msg: "Welcome to Wordanalyser",
-    input: "Enter here sentences you want to have analysed..."
+    msg: "Wordanalyser-Tool",
+    input: "Dieser Satz hat fünf Wörter"
 };

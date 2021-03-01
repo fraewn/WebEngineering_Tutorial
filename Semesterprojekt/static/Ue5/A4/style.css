@@ -1,0 +1,145 @@
+body {
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-left: 0px;
+    margin-bottom: 0px;
+}
+
+.all {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 14% 76% 10%;
+    grid-column-gap: 0%;
+    grid-row-gap: 0%;
+    height: 100vh;
+}
+
+header {
+    background: #c14f4f;
+    color: white;
+    text-align: left;
+    font-size: 60px;
+    line-height: 0.6em;
+    margin-top: -40px;
+    padding: 0em;
+    top: 0;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+}
+
+.navlist {
+    display: inline-block;
+    margin-top: 0.3em;
+}
+
+.stylized_linkbox {
+    background-color: #6a709f;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    border-color: white;
+    width: 	10%;
+    line-height: 5px;
+    text-align: center;
+}
+
+.links {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: inherit;
+}
+
+.article{
+    color: white;
+    background: #6a9ebd;
+    text-align: left;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    padding: 1em;
+}
+
+.side_left {
+    color: white;
+    background: #c28281;
+    font-size: 50px;
+    padding-top: 0em;
+    padding-left: 1em;
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+.side_right {
+    color: white;
+    background: #c28281;
+    font-size: 50px;
+    padding: 2em;
+    padding-top: 0em;
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+
+}
+
+.footer {
+    background: #000000;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 3;
+}
+
+.navlist_footer {
+    display: inline-block;
+    font-size: 10px;
+    line-height: 0em;
+}
+
+.stylized_linkbox_footer {
+    color: white;
+}
+
+.links_footer {
+    color: white
+}
+
+.stylized_left_side_links {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: inherit;
+    background-color: #6a709f;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    border-color: white;
+    width: 	80%;
+    line-height: 5px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 1em;
+}
+
+.stylized_left_side_links2 {
+    color: #000000;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: inherit;
+    background-color: #6a709f;
+    border: 3px solid white;
+    border-radius: 10px;
+    color: white;
+    border-color: white;
+    width: 	80%;
+    line-height: 5px;
+    text-align: center;
+    padding: 1px;
+    margin-top: 1em;
+}

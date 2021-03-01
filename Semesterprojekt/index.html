@@ -36,15 +36,81 @@
     <!-- side right -->
     <div class="box side_right">
         <div class="box journey">
-            <div class="headings">My WebDev Journey</div>
+            <div class="headings">My WebDev Journey </div>
             Starting out as a complete beginner, the closest I ever came to web engineering before
             was the Java framework <a class="links" href="https://vaadin.com/">Vaadin</a>. Here I share what I learned in one semester.
         </div>
         <div class="box about">
-            <div class="headings">About Me</div>
+            <div class="headings">About Me
+                &#128105;&#8205;&#128187;</div>
             Visit me on <a class=links href="https://github.com/fraewn/">Github</a>: Happy to present IASA,
             a tool to evaluate software projects regarding pattern usage.
         </div>
+    </div>
+
+    <div class="prime_service">
+        <h1>The Prime Service &#129518;</h1>
+        <h3>Relax, while a webworker is calculating prime numbers in the background. Every <strong>40th</strong> prime is displayed below.</h3>
+        <h3>Current Performance:</h3>
+        <div id="performance"></div>
+        <h3>Progress:</h3>
+        <div id="myProgress">
+            <div id="myBar"></div>
+        </div>
+        <p></p>
+        <p id="primeplace"></p>
+        <script>
+            // animation
+            const bar = document.getElementById("myBar");
+            let loadingBar = requestAnimationFrame(move);
+            let width = 1;
+            let count = 1;
+            function move() {
+                width += count;
+                if(width===100){
+                    count = -1;
+                }
+                if(width===0){
+                    count = 1;
+                }
+                bar.style.width = width + "%";
+                loadingBar = requestAnimationFrame(move);
+            }
+
+            // performance measuring
+            function measurePerformance(){
+                // at begin
+                let date = new Date();
+                setTimeout(_=>writeNewNodeToDoc("performance", date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + ":  " + Math.round(performance.now()) + " ms"), 0);
+                // every 30 sec
+                let d = 0;
+                setInterval(_=> d = new Date(), 15 * 1000);
+                setInterval(_=> writeNewNodeToDoc("performance", d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":  " + Math.round(performance.now()) + " ms"), 15 * 1000);
+
+                }
+            measurePerformance();
+
+            // web worker event listener
+            let webWorker = new Worker('primeWebWorker.js');
+            let minimizer = 0;
+            webWorker.addEventListener('message', function(e) {
+                if (minimizer%40 == 0) {
+                    document.getElementById('primeplace').innerHTML += e.data + ", ";
+                }
+                minimizer++;
+            }, false);
+
+            // helper functions
+            function writeNewNodeToDoc(elementId, text){
+                let newTextNode = document.createElement("p");
+                newTextNode.innerHTML = text;
+                let placeholder = document.getElementById(elementId);
+                placeholder.appendChild(newTextNode);
+            }
+            function writeToDoc(elementId, text){
+                document.getElementById(elementId).innerHTML += text;
+            }
+        </script>
     </div>
 
     <!-- solution navigator-->
@@ -53,30 +119,40 @@
         <div class="Uebungen">
             <div class="Ue1">
                 <div class="headings">Übung 1 | <br>Introduction</div>
-                <a href="./static/A1/ProductLandingPage.html">A1: Product Landing Page</a><br>
-                <a href="./static/A1/SurveyForm.html">A2: Survey Form</a><br>
-                <a href="./static/A1/TributePage.html">A3: Tribute Page</a><br>
+                <a href="static/Ue1/A1.html">A1: Erfolgsprinzipien WWW</a><br>
+                <a href="static/Ue1/A2.html">A2: HTTP</a><br>
+                <a href="static/Ue1/A3.html">A3: Tribute Page</a><br>
+                <a href="static/Ue1/A4.html">A4: Survey Form</a><br>
+                <a href="static/Ue1/A5.html">A5: Product Landing Page</a><br>
             </div>
             <div class="Ue2">
                 <div class="headings">Übung 2 | <br> Responsive Web Design</div>
-                <a href="https://wikipedia.de">A1</a><br>
-                <a>A2</a><br>
-                <a>A3</a><br>
-                <a>A4</a><br>
+                <a href="static/Ue2/A1.html">A1: Flexbox Desktop-First</a><br>
+                <a href="static/Ue2/A2.html">A2: Grid Mobile First</a><br>
+                <a href="static/Ue2/A3.1.html">A3: Holy Grail (Flexbox)</a><br>
+                <a href="static/Ue2/A3.2.html">A3: Holy Grail (Grid)</a><br>
+                <a href="static/Ue2/A4.html">A4: Product Landing Page 2.0</a><br>
             </div>
             <div class="Ue3">
                 <div class="headings">Übung 3 | <br> Java Script </div>
-                <a href="https://wikipedia.de">A1</a><br>
-                <a>A2</a><br>
-                <a>A3</a><br>
+                <a href="static/Ue3/A1.html">JS Part 1 (Code)</a><br>
+                <a href="static/Ue3/A2.html">JS Part 2 (Code)</a><br>
                 <a>A4</a><br>
             </div>
             <div class="Ue4">
                 <div class ="headings">Übung 4 | <br> Document Object Model </div>
-                <a href="https://wikipedia.de">A1</a><br>
-                <a>A2</a><br>
-                <a>A3</a><br>
-                <a>A4</a><br>
+                <a href="static/Ue4/A1.html">A1: Einkaufsliste</a><br>
+                <a href="static/Ue4/A2.html">A2: Rednerliste</a><br>
+                <a href="static/Ue4/A3.html">A3: Tabellenkalkulation</a><br>
+            </div>
+            <div class="Ue5">
+                <div class ="headings">Übung 5 | <br> Async </div>
+                <a href="static/Ue5/A1.html">A1: Promises</a><br>
+                <a href="static/Ue5/A2.html">A2: Async/Await</a><br>
+                <a href="static/Ue5/A3.1.html">A3.1: Primes without webworker </a><br>
+                <a href="static/Ue5/A3.2.html">A3.2: Primes with webworker</a><br>
+                <a href="static/Ue5/performance measuring/performance">Performance Measurements</a><br>
+                <a href="static/Ue5/A4.html">A4: WWW-Navigator</a><br>
             </div>
         </div>
 

@@ -2,6 +2,10 @@ import { Menu } from './Menu';
 
 export default {
     title: 'Tech/Menu',
+    argTypes: {
+        backgroundColor: {control: 'color'},
+        color: {control: 'color'}
+    }
 };
 
 const Template = (args) => Menu(args);

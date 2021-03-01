@@ -1,0 +1,13 @@
+.my-header {
+    background: #009ee0;
+    height: 30vh;
+    width: 100%;
+}
+
+.title{
+    font-family: Verdana;
+    text-align: center;
+    padding: 1vw;
+    font-size: 2vw;
+    color: white;
+}
