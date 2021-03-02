@@ -6,12 +6,12 @@
 </head>
 <body>
     <h1>Choose two files and click merge! </h1>
-    <form>
+    <form action="/merge" method="post">
         <input type="radio" id="big_file1_choose" name="big_file1.txt">
         <label id="bf1" for="big_file1_choose">big_file1.txt</label><br>
         <input type="radio" id="big_file2_choose" name="big_file2.txt">
         <label id="bf12" for="big_file2_choose">big_file2.txt</label><br>
-        <input id="merge_button" type="button" value="Merge!">
+        <input id="merge_button" type="submit" value="Merge!">
     </form>
 <script src="app.js"></script>
 </body>
