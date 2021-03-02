@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GCD Test</title>
+</head>
+<body style="font-family: Verdana">
+<h1> Wasm vs. Js - Greatest Common Divisor Test </h1>
+<p id="desc"></p>
+<p id="testJs"></p>
+<p id="testWasm"></p>
+<p id="result"></p>
+<script type="module">
+    // Preparations
+    let a = Math.floor(Math.random()*100);
+    let b = Math.floor(Math.random()*100);
+
+    document.getElementById("desc").innerText = "Two random numbers between 1 and 100 were generated: a=" + a + " and b=" + b;
+
+    // Test with Java Script
+    // src: https://stackoverflow.com/questions/17445231/js-how-to-find-the-greatest-common-divisor
+    function gcd(a, b) {
+        if (!b) {
+            return a;
+        }
+        return gcd(b, a % b);
+    }
+
+    let localResult = gcd(a,b);
+    document.getElementById("testJs").innerText = "The gcd calculation using a simple java script algorithm finished with the result: " + localResult;
+
+    // Test with Wasm
+    let wasmResult = 0;
+    async function executeWasmTest(){
+        const wasmFile = await fetch("gcd.wasm");
+        const buf = await wasmFile.arrayBuffer();
+        const wasmCode = await WebAssembly.instantiate(buf);
+        const wasmInstance = wasmCode.instance;
+
+        wasmResult =  wasmInstance.exports.GreatestCommonDivisor(a,b);
+        let displayResult = document.getElementById("testWasm");
+        displayResult.innerText = " The gcd calculation using Web Assembly (based on a gcd-algorithm written in C) finished with the result: " + wasmResult;
+        document.getElementById("result").innerText = "Insgesamt war der Test " + (localResult==wasmResult ? "erfolgreich" : "nicht erfolgreich") + ".";
+    }
+    executeWasmTest();
+</script>
+</body>
+</html>

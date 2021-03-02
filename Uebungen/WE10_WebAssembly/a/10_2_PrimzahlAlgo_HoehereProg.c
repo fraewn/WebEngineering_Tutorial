@@ -5,12 +5,10 @@ int getNewPrimeNumber(int lastNumber);
 bool isPrimeNumber(int number);
 
 
-int countPrimes(int until)
+int calcPrimes(int until)
 {
   int lastNumber = 2;
 	int primesCount=0;
-	
-	
 	for (;;){
 		
 	  lastNumber = getNewPrimeNumber(lastNumber);
@@ -28,8 +26,6 @@ int countPrimes(int until)
 }
 
 int getNewPrimeNumber(int lastNumber){
-
-	
 		int currNum = lastNumber+1;
 		
 		for (;;){
@@ -39,7 +35,6 @@ int getNewPrimeNumber(int lastNumber){
 			}
 			currNum = currNum+1;						
 		}
-  
   return -1;
 }
 
@@ -52,6 +47,5 @@ bool isPrimeNumber(int number){
 			break;
 		}
 	}
-	
 	return isStillPrime;
 }

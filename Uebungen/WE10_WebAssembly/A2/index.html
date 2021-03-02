@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Prime Calculator with JS vs. Web Assembly using the Sieve of Erastothenes</h1>
+<p id="countPrimesJs"></p>
+<p id="countPrimesWasm"></p>
+<p id="perfJs"></p>
+<p id="perfWasm"></p>
+</body>
+<script type="module">
+    import {getPrimeNumbers} from './calcPrimesJs.js';
+    let number = 100000;
+    let performanceMeasureStart = performance.now()
+    let jsRes = getPrimeNumbers(number);
+    let performanceMeasureEnd = performance.now()
+    let displayResJs = document.getElementById("countPrimesJs");
+    displayResJs.innerText = "The result using the java script algorithm is: " + jsRes.length;
+    let displayPerfJs = document.getElementById("perfJs");
+    let perf = performanceMeasureEnd - performanceMeasureStart;
+    displayPerfJs.textContent = "The performance of the java script algorithm was: " + perf + "ms";
+
+    let wasmResult;
+    async function executeWasmTest(number){
+        const wasmFile = await fetch("calcPrimes.wasm");
+        const buf = await wasmFile.arrayBuffer();
+        const wasmCode = await WebAssembly.instantiate(buf);
+        const wasmInstance = wasmCode.instance;
+        console.log(number.toString());
+        let performanceMeasureStart = performance.now()
+        wasmResult =  wasmInstance.exports.calcPrimes(number);
+        let performanceMeasureEnd = performance.now()
+        let perf =  performanceMeasureEnd - performanceMeasureStart;
+        let displayResult = document.getElementById("countPrimesWasm");
+        displayResult.innerText = "The result using Web Assembly is: " + (wasmResult + 1);
+        let displayPerfJs = document.getElementById("perfWasm");
+        displayPerfJs.textContent = "The performance of Web Assembly was: " + perf + "ms";
+    }
+    executeWasmTest(number);
+
+</script>
+</html>
