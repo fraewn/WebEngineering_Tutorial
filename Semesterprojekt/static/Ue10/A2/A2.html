@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <title>Title</title>
 </head>
-<body>
-<h1>Prime Calculator with JS vs. Web Assembly using the Sieve of Erastothenes</h1>
+<body style="font-family: Verdana">
+<h1>Prime Calculator with JS vs. Web Assembly</h1>
 <p id="countPrimesJs"></p>
-<p id="countPrimesWasm"></p>
 <p id="perfJs"></p>
+<p id="countPrimesWasm"></p>
 <p id="perfWasm"></p>
 </body>
 <script>
@@ -17,10 +17,10 @@
     let jsRes = getPrimeNumbers(number);
     let performanceMeasureEnd = performance.now()
     let displayResJs = document.getElementById("countPrimesJs");
-    displayResJs.innerText = "The result using the java script algorithm is: " + jsRes.length;
+    displayResJs.innerText = "The result using the Java Script algorithm is: " + jsRes.length;
     let displayPerfJs = document.getElementById("perfJs");
     let perf = performanceMeasureEnd - performanceMeasureStart;
-    displayPerfJs.textContent = "The performance of the java script algorithm was: " + perf + "ms";
+    displayPerfJs.textContent = "The performance of the Java Script algorithm was: " + perf + "ms";
 
     let wasmResult;
     async function executeWasmTest(number){

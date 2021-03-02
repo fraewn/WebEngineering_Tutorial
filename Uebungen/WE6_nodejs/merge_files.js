@@ -9,6 +9,8 @@ const newfile = 'merged_file_files.txt';
 
 fs.writeFile(newfile, "");
 
+// source: Vorlesung:
+// https://kaul.inf.h-brs.de/wem/#app-content-7-0&01_M_Orga=page-2&10_webassembly=page-35&05_async=page-99&06_node=page-50
 (async _=>{
     const[text1, text2] = await Promise.all([
         fs.readFile(big_file1, 'utf8'),

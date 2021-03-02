@@ -8,7 +8,7 @@ body {
 .all {
     display: grid;
     grid-template-columns: 20% 60% 20%;
-    grid-template-rows: 14% 76% 10%;
+    grid-template-rows: 20% 70% 10%;
     grid-column-gap: 0%;
     grid-row-gap: 0%;
     height: 100vh;
@@ -18,9 +18,7 @@ header {
     background: #c14f4f;
     color: white;
     text-align: left;
-    font-size: 60px;
-    line-height: 0.6em;
-    margin-top: -40px;
+    font-size: 2.3vw;
     padding: 0em;
     top: 0;
     width: 100%;

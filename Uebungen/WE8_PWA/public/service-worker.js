@@ -1,3 +1,4 @@
+// everything based on this tutorial: https://morioh.com/p/3cefa4bd6d05
 const CACHE_NAME = 'sw-cache-example';
 const toCache = [
     '/',
@@ -15,6 +16,7 @@ self.addEventListener( 'install', function (event) {
     )
 })
 
+// based on this source: https://stackoverflow.com/questions/45467842/how-to-clear-cache-of-service-worker
 self.addEventListener( 'activate', function (event) {
         event.waitUntil(
             caches.keys()
@@ -29,6 +31,8 @@ self.addEventListener( 'activate', function (event) {
                 .then(() => self.clients.claim())
         )
 })
+
+// based on this source: https://developers.google.com/web/ilt/pwa/caching-files-with-service-worker
 self.addEventListener( 'fetch', function (event) {
     event.respondWith(
         fetch(event.request)

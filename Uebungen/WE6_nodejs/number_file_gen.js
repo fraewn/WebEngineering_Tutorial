@@ -1,4 +1,4 @@
-// writeFileSync is obv. only available in the require('fs') module not in require('fs').promises
+// writeFileSync is only available in the require('fs') module not in require('fs').promises
 const fs = require('fs');
 
 // get parameter

@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <style>
+    /* source: https://www.w3schools.com/howto/howto_js_progressbar.asp */
     #myProgress {
         width: 100%;
         background-color: #ddd;
@@ -27,6 +28,7 @@
 <p id="primeplace"></p>
 <script>
     // animation
+    // source: https://www.w3schools.com/howto/howto_js_progressbar.asp
     const bar = document.getElementById("myBar");
     let loadingBar = requestAnimationFrame(move);
     let width = 1;
@@ -44,6 +46,7 @@
     }
 
     // prime calc
+    // source: https://stackoverflow.com/questions/40200089/number-prime-test-in-javascript
     function isPrime(prime) {
         for (let i = 2n; i < prime; i++) {
             if (prime % i === 0n) {

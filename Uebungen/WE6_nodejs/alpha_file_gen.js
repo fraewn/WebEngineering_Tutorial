@@ -1,3 +1,4 @@
+// created with the help of Fabian Stotz
 fs = require('fs')
 
 const limit = process.argv[2];

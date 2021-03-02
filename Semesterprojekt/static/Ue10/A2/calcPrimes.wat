@@ -2,19 +2,19 @@
  (table 0 anyfunc)
  (memory $0 1)
  (export "memory" (memory $0))
- (export "countPrimes" (func $countPrimes))
+ (export "calcPrimes" (func $calcPrimes))
  (export "getNewPrimeNumber" (func $getNewPrimeNumber))
  (export "isPrimeNumber" (func $isPrimeNumber))
- (func $countPrimes (; 0 ;) (param $0 i32) (result i32)
+ (func $calcPrimes (; 0 ;) (param $0 i32) (result i32)
   (local $1 i32)
   (local $2 i32)
   (local $3 i32)
   (local $4 i32)
+  (set_local $3
+   (i32.const 0)
+  )
   (set_local $4
    (i32.const 2)
-  )
-  (set_local $3
-   (i32.const 1)
   )
   (loop $label$0
    (set_local $1

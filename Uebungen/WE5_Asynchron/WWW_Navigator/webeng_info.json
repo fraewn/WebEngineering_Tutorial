@@ -11,7 +11,25 @@
       "references": [
         "https://developer.mozilla.org/de/docs/Web/HTML/Element/p"
       ]
-    }
+    },
+    "attributes": {
+      "content": "Attributes are always specified in the start tag and usually come in name/value pairs like: name=\"value\"",
+      "references": [
+        "https://www.w3schools.com/html/html_attributes.asp"
+      ]
+    },
+    "comments": {
+      "content": "Comments can be added in HTML like this: <!-- Comment Example --> ",
+      "references": [
+        "https://www.w3schools.com/html/html_comments.asp"
+      ]
+    },
+    "links": {
+      "content": "Links can be added in HTML like this: \n<a href=\"url\">description of link</a>\n",
+      "references": [
+        "https://www.w3schools.com/html/html_links.asp"
+      ]
+}
   },
   "css": {
     "selectors": {
@@ -24,6 +42,12 @@
       "content": "Der CSS Datentyp Color beschreibt eine Farbe im sRGB Farbraum. Eine Farbe kann auf eine von drei Arten beschrieben werden: Schlüsselworte, rgb und rgba, hsl und hsla. ...",
       "references": [
         "https://developer.mozilla.org/de/docs/Web/CSS/Farben"
+      ]
+    },
+    "margins": {
+      "content": "With margins you can create space around your elements.",
+      "references": [
+        "https://www.w3schools.com/css/css_margin.asp"
       ]
     }
   },

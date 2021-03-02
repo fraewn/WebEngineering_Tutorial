@@ -74,7 +74,7 @@
     row-gap: 0.6em;
     grid-template-columns: subgrid;
     grid-template-rows: repeat(2,minmax(0.1em,auto));
-    font-size: 1.3vw;
+    font-size: 1.08vw;
     background-color: #e6c300;
     color: #6f655b;
     font-family: 'Raleway', sans-serif;
