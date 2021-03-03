@@ -77,22 +77,28 @@
                 loadingBar = requestAnimationFrame(move);
             }
 
+            let countPerfRound = 2;
             // performance measuring
             function measurePerformance(){
                 // at begin
                 let date = new Date();
-                setTimeout(_=>writeNewNodeToDoc("performance", date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + ":  " + Math.round(performance.now()) + " ms"), 0);
+                setTimeout(_=>writeNewNodeToDoc("performance", date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() + ":  " + Math.round(performance.now()-perfStart) + " ms"), 0);
                 // every 30 sec
                 let d = 0;
                 setInterval(_=> d = new Date(), 15 * 1000);
-                setInterval(_=> writeNewNodeToDoc("performance", d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":  " + Math.round(performance.now()) + " ms"), 15 * 1000);
+                setInterval(_=> writeNewNodeToDoc("performance", d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds() + ":  " + Math.round(performance.now()/countPerfRound++) + " ms"), 15 * 1000);
 
                 }
-            measurePerformance();
+
 
             // web worker event listener
             let webWorker = new Worker('primeWebWorker.js');
+            const perfStart = performance.now();
+            console.log(performance.now());
             let minimizer = 0;
+
+            measurePerformance();
+
             webWorker.addEventListener('message', function(e) {
                 if (minimizer%40 == 0) {
                     document.getElementById('primeplace').innerHTML += e.data + ", ";
