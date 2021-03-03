@@ -1,7 +1,7 @@
 # Project for uni class "Web Engineering" 
 
 ### Project Structure
-##### Uebungen 
+#### /Uebungen 
 ###### Exercises
 * contains code for all exercises of the class 
 * one folder for each week, e.g. [Week 2: Responsive Web Design](Uebungen/WE2_RWD) 
@@ -12,7 +12,7 @@
 * [Vue-Storybook](Uebungen/WE9_Vue/A1/vue_sfc/sfc) can be found in WE9_Vue/A1/vue_sfc/sfc 
 * both storybooks can be deployed with ``npm install`` and then ``npm run storybook``
 
-#### Semesterprojekt 
+#### /Semesterprojekt 
 * contains the [html/js](Semesterprojekt/index.html) and [css](Semesterprojekt/css/style.css) code for the solution navigator website
 * contains the code for all exercises presented on the website in the [static](Semesterprojekt/static) directory
 
